@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de clínica fictícia desenvolvido para fins de estudo de HTML, CSS e JavaScript. Não realiza atendimentos ou agendamentos reais.">
     <title>Horário de atendimento</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="modern.css?v=2">
+    <script src="clinic.js" defer></script>
 </head>
 
 <body>
-    <nav>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <nav aria-label="Navegação principal">
+        <a class="brand" href="index.html">Bem-Estar<small>Clínica e cuidado</small></a>
         <ul>
-            <li><a href="index.html">Página Principal</a></li>
-            <li><a href="on.html">Sobre a Clinica</a></li>
-            <li><a href="time.html">Horário de atendimento</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="on.html">A clínica</a></li>
+            <li><a href="time.html">Horários e valores</a></li>
             <li><a href="contact.html">Contato</a></li>
+        <li><a href="agendar.html">Simular consulta</a></li>
         </ul>
     </nav>
 
@@ -22,7 +29,7 @@
         <h1>Horário De Atendimento</h1>
     </header>
 
-    <main class="content">
+    <main id="conteudo" class="content">
         <div class="card">
             <h2>Atendimento da Clínica Bem-Estar</h2>
             <p>
@@ -30,16 +37,18 @@
                 para agendar sua consulta com conforto e praticidade:
             </p>
 
-            <table class="tabela-horarios">
+            <p class="notice">Valores de referência do projeto, sujeitos à confirmação da clínica. <a href="agendar.html">Simular uma consulta</a>.</p>
+            <div class="table-wrap" role="region" aria-label="Tabela de horários e valores" tabindex="0"><table class="tabela-horarios">
+                <caption>Atendimento e valores por dia da semana</caption>
                 <thead>
                     <tr>
-                        <th>Dia</th>
-                        <th>Horário</th>
-                        <th>Consulta Geral</th>
-                        <th>Pediatria</th>
-                        <th>Nutrição</th>
-                        <th>Exames</th>
-                        <th>Fisioterapia</th>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Horário</th>
+                        <th scope="col">Consulta Geral</th>
+                        <th scope="col">Pediatria</th>
+                        <th scope="col">Nutrição</th>
+                        <th scope="col">Exames</th>
+                        <th scope="col">Fisioterapia</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -103,7 +112,7 @@
                         <td colspan="5" style="text-align: center;">—</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
         </div>
 
         <div class="card-img-time">
@@ -112,7 +121,7 @@
     </main>
 
     <footer>
-        &copy; 2025 Clínica Bem-Estar - Todos os direitos reservados | Telefone: (00) 1234-5678
+        <span class="footer-brand">Bem-Estar<span aria-hidden="true"> +</span></span><span>Projeto desenvolvido para fins de estudo.<br>Clínica fictícia · Não realiza agendamentos ou atendimentos reais.</span>
     </footer>
 </body>
 

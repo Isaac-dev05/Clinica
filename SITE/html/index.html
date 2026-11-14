@@ -4,44 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de clínica fictícia desenvolvido para fins de estudo de HTML, CSS e JavaScript. Não realiza atendimentos ou agendamentos reais.">
     <title>Clinica Bem-estar</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="modern.css?v=2">
+    <script src="clinic.js" defer></script>
 </head>
 
 <body>
-    <nav>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <nav aria-label="Navegação principal">
+        <a class="brand" href="index.html">Bem-Estar<small>Clínica e cuidado</small></a>
         <ul>
-            <li><a href="index.html">Página Principal</a></li>
-            <li><a href="on.html">Sobre a Clinica</a></li>
-            <li><a href="time.html">Horário de atendimento</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="on.html">A clínica</a></li>
+            <li><a href="time.html">Horários e valores</a></li>
             <li><a href="contact.html">Contato</a></li>
+        <li><a href="agendar.html">Simular consulta</a></li>
         </ul>
     </nav>
 
-    <header>
+    <header class="home-header">
         <img src="img/logo.png" alt="Logo">
     </header>
 
 
-    <main>
+    <main id="conteudo" class="home-content">
         <div class="content">
-            <div class="card">
-                <h2>Bem vindo a Clinica Bem-Estar</h2>
-                <img src="img/medicos.png" width="300px">
+            <div class="card hero">
+                <div>
+                <span class="eyebrow">Cuidado para cada fase da vida</span><h1>Cuidar de você.<br><em>É o que nos<br>move.</em></h1>
 
-                <p>
-                    Na <strong>Clínica Bem-Estar</strong>, acreditamos que cuidar da saúde é essencial para uma vida
-                    plena e equilibrada.
-                    Contamos com uma equipe de profissionais qualificados, estrutura moderna e atendimento humanizado.
-                    Nosso compromisso é oferecer <em>prevenção, diagnóstico e tratamento</em> com dedicação e respeito,
-                    garantindo conforto e confiança em cada consulta.
-                </p>
 
+                <p>Um olhar atento para a sua saúde, em cada fase da vida. Conheça nossos serviços e encontre o próximo passo para cuidar de você.</p>
+
+                <div class="hero-actions"><a class="button" href="agendar.html">Planejar minha consulta ↗</a>
+                <a class="button secondary" href="#services-title">Conhecer os serviços</a></div><div class="hero-footnote"><span aria-hidden="true">✳</span><span><strong>Cuidado que começa com informação.</strong><br>Explore os serviços, horários e valores em um só lugar.</span></div>
+                </div><div class="hero-visual"><img src="img/medicos.png" alt="Imagem ilustrativa de um profissional de saúde"><div class="photo-note"><span aria-hidden="true">+</span><div><strong>Mais atenção. Mais cuidado.</strong><small>Bem-estar em cada etapa da sua jornada.</small></div></div></div>
+            </div>
+        </div>
+        <div class="info-strip"><div><small>Encontre o seu cuidado</small><strong>5 áreas de atendimento</strong></div><div><small>De segunda a sexta</small><strong>08h às 18h</strong></div><div><small>Também aos sábados</small><strong>08h às 12h</strong></div></div>
+        <section class="section" aria-labelledby="services-title">
+            <div class="section-heading"><div><span class="eyebrow">Especialidades</span><h2 id="services-title">O cuidado que você precisa,<br>mais perto de você.</h2></div>
+            <p class="muted">Valores de referência da tabela do projeto. Aos sábados, os valores são diferentes.</p></div>
+            <label for="service-search">Buscar especialidade</label><input class="search" id="service-search" type="search" placeholder="Ex.: nutrição">
+            <p id="search-status" role="status"></p><div class="service-grid">
+<article class="card" data-service="Consulta geral"><span class="service-icon" aria-hidden="true">✳</span><h3>Consulta geral</h3><p class="price">R$ 150,00</p><p class="muted">Segunda a sexta</p><a class="button secondary" href="agendar.html?servico=geral">Simular consulta geral</a></article>
+<article class="card" data-service="Pediatria"><span class="service-icon" aria-hidden="true">♡</span><h3>Pediatria</h3><p class="price">R$ 160,00</p><p class="muted">Segunda a sexta</p><a class="button secondary" href="agendar.html?servico=pediatria">Simular pediatria</a></article>
+<article class="card" data-service="Nutrição"><span class="service-icon" aria-hidden="true">♧</span><h3>Nutrição</h3><p class="price">R$ 140,00</p><p class="muted">Segunda a sexta</p><a class="button secondary" href="agendar.html?servico=nutricao">Simular nutrição</a></article>
+<article class="card" data-service="Exames"><span class="service-icon" aria-hidden="true">⌁</span><h3>Exames</h3><p class="price">R$ 100,00</p><p class="muted">Segunda a sexta</p><a class="button secondary" href="agendar.html?servico=exames">Simular exames</a></article>
+<article class="card" data-service="Fisioterapia"><span class="service-icon" aria-hidden="true">↗</span><h3>Fisioterapia</h3><p class="price">R$ 120,00</p><p class="muted">Segunda a sexta</p><a class="button secondary" href="agendar.html?servico=fisioterapia">Simular fisioterapia</a></article>
+<article class="card service-intro"><span class="eyebrow" style="color:#d9edac">Seu próximo passo</span><h3>Vamos planejar<br>o seu cuidado?</h3><p>Veja os horários e consulte uma estimativa antes de entrar em contato.</p><a href="agendar.html">Explorar horários ↗</a></article>
+            </div>
+        </section>
+        <section class="journey"><div><span class="eyebrow">Do seu jeito, no seu tempo</span><h2>Começar pode<br>ser simples.</h2><p>As informações que você precisa para organizar sua próxima consulta.</p></div><ol><li><span>01</span><div><strong>Encontre a especialidade</strong><p>Explore as áreas de atendimento disponíveis no site.</p></div></li><li><span>02</span><div><strong>Escolha o melhor dia</strong><p>Simule um horário e consulte o valor de referência.</p></div></li><li><span>03</span><div><strong>Confirme com a clínica</strong><p>A simulação não reserva uma vaga. O atendimento depende de confirmação.</p></div></li></ol></section>
+        <section class="section card faq"><div><span class="eyebrow">Podemos ajudar?</span><h2>Suas dúvidas,<br>com clareza.</h2><p class="muted">Saiba como funciona antes de dar o próximo passo.</p></div><div>
+            <details><summary>Consigo agendar pelo site?</summary><p>Por enquanto, você pode simular uma consulta e consultar os valores. A simulação não reserva horários; o agendamento depende da confirmação da clínica.</p></details>
+            <details><summary>Existe atendimento aos sábados?</summary><p>A tabela do site informa atendimento das 8h às 12h aos sábados, com valores específicos. Aos domingos, a clínica está fechada.</p></details>
+            <details><summary>O site guarda meus dados?</summary><p>A simulação não pede dados pessoais e não salva informações. O formulário de contato ainda não está conectado a um serviço de envio.</p></details></div>
+        </section>
     </main>
 
 
     <footer>
-        &copy; 2025 Clínica Bem-Estar - Todos os direitos reservados | Telefone: (00) 1234-5678
+        <span class="footer-brand">Bem-Estar<span aria-hidden="true"> +</span></span><span>Projeto desenvolvido para fins de estudo.<br>Clínica fictícia · Não realiza agendamentos ou atendimentos reais.</span>
     </footer>
 
 </body>

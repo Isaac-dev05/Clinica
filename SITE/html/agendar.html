@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de clínica fictícia desenvolvido para fins de estudo de HTML, CSS e JavaScript. Não realiza atendimentos ou agendamentos reais.">
+    <title>Simular consulta | Clínica Bem-Estar</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="modern.css?v=2">
+    <script src="clinic.js" defer></script>
+</head>
+
+<body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <nav aria-label="Navegação principal">
+        <a class="brand" href="index.html">Bem-Estar<small>Clínica e cuidado</small></a>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="on.html">A clínica</a></li>
+            <li><a href="time.html">Horários e valores</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        <li><a href="agendar.html">Simular consulta</a></li>
+        </ul>
+    </nav>
+
+    <header class="banner1">
+        <h1>Planeje sua consulta</h1>
+    </header>
+
+    <main id="conteudo">
+    <section class="card" style="width:100%;max-width:800px">
+        <span class="eyebrow">Simples e sem compromisso</span><h2>Simulação de consulta</h2>
+        <p>Escolha o serviço, o dia e um horário para consultar o valor de referência.</p>
+        <p class="notice">Esta é uma simulação. Os horários são ilustrativos, não representam a agenda dos profissionais e não geram uma reserva. Feriados precisam ser confirmados com a clínica.</p>
+        <form id="appointment-form">
+            <label for="service">Serviço</label><select id="service" required></select>
+            <div class="form-grid"><div><label for="date">Data desejada</label><input id="date" type="date" required aria-describedby="date-help"></div>
+            <div><label for="time">Horário desejado</label><select id="time" required disabled></select></div></div>
+            <p id="date-help" class="muted"></p><p id="estimate" class="notice"></p>
+            <div class="form-actions"><button class="button" type="submit">Ver resumo</button><a class="button secondary" href="time.html">Tabela completa</a></div>
+        </form>
+        <div id="summary" class="notice result" role="status" hidden></div>
+        <noscript>Ative o JavaScript para usar a simulação. Os horários e valores também estão disponíveis na página de horários.</noscript>
+    </section>
+</main>
+
+    <footer>
+        <span class="footer-brand">Bem-Estar<span aria-hidden="true"> +</span></span><span>Projeto desenvolvido para fins de estudo.<br>Clínica fictícia · Não realiza agendamentos ou atendimentos reais.</span>
+    </footer>
+</body>
+
+</html>
